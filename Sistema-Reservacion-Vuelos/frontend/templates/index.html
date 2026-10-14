@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aerovia · Reservación de vuelos</title>
+<link rel="stylesheet" href="/static/style.css">
+<script defer src="/static/app.js">
+</script>
+</head>
+<body>
+<header>
+<a class="brand" href="/">✈ AEROVIA <small>PROYECTO ACADÉMICO</small>
+</a>
+<nav>
+<a href="#catalog">Vuelos</a>
+<a href="#my">Mis reservas</a>
+<button id="account">Entrar / Registrarme</button>
+<button id="logout" hidden>Salir</button>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div>
+<p class="eyebrow">CIUDAD DE MÉXICO → EL MUNDO</p>
+<h1>Tu próximo destino<br>empieza aquí.</h1>
+<p>Cinco destinos. Un viaje por elegir.<br>Salida: 8 de noviembre de 2026 · Terminal 2 · Puerta 2.</p>
+<a class="button" href="#catalog">Explorar vuelos ↓</a>
+</div>
+<div class="boarding">
+<span>PASE DE EXPLORACIÓN</span>
+<strong>MEX</strong>
+<div class="route">──────── ✈ ────────</div>
+<p>30 asientos por vuelo<br>20 turista · 10 primera clase</p>
+<small>Demo educativa · Sin cobros reales</small>
+</div>
+</section>
+<div id="message" role="status" aria-live="polite">
+</div>
+<section id="auth" hidden class="panel">
+<h2>Tu cuenta</h2>
+<p>Explora libremente. Para reservar, crea una cuenta o inicia sesión.</p>
+<form id="authform">
+<label>Nombre (solo registro)<input id="name" autocomplete="name" maxlength="80">
+</label>
+<label>Correo<input id="email" type="email" autocomplete="email" required maxlength="254">
+</label>
+<label>Contraseña<input id="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required>
+</label>
+<div class="actions">
+<button type="submit">Iniciar sesión</button>
+<button type="button" id="register" class="secondary">Crear cuenta</button>
+</div>
+</form>
+</section>
+<section id="catalog">
+<div class="sectionhead">
+<div>
+<p class="eyebrow">ELIGE TU RUTA</p>
+<h2>Vuelos disponibles</h2>
+</div>
+<label>Buscar destino<input id="search" type="search" placeholder="Italia, Guadalajara…">
+</label>
+</div>
+<p class="muted">Precios en MXN por boleto sencillo. Primera clase tiene tarifa única, independientemente de la categoría.</p>
+<div id="flights" class="cards">
+</div>
+</section>
+<section id="selection" class="panel" hidden>
+<p class="eyebrow">SELECCIÓN DE ASIENTOS</p>
+<h2 id="selection-title">
+</h2>
+<p id="timer">
+</p>
+<div class="controls">
+<label>Total de boletos (adultos y niños juntos)<input id="quantity" type="number" min="1" max="30" value="1">
+</label>
+</div>
+<p>Al tocar un asiento se bloquea inmediatamente. Toca uno seleccionado para quitarlo. El plazo de selección no se renueva.</p>
+<p class="legend">□ Disponible · <span>■ Seleccionado</span> · ▧ Ocupado</p>
+<div id="seats">
+</div>
+<div id="passengers"></div>
+<p id="selected-total">
+</p>
+<button id="checkout">Continuar a compra →</button>
+</section>
+<section id="my">
+<p class="eyebrow">TU VIAJE</p>
+<h2>Mis reservas y compras</h2>
+<p id="guest">Inicia sesión para consultar tus reservas.</p>
+<div id="bookings">
+</div>
+</section>
+<section class="note">
+<h3>Sobre esta demostración</h3>
+<p>Ida y vuelta: dos tarifas sencillas; 20% de descuento en Quatar y Guadalajara. En los demás destinos no se aplica descuento. Solo se asignan asientos de ida; el regreso queda pendiente porque la consigna no incluye itinerario.</p>
+<p>Se conservan “Quatar” y “Korea” como aparecen en la consigna. No representan aeropuertos precisos.</p>
+</section>
+</main>
+<footer>Josué · Texis · León · Vera <span>Sistema de Reservación de Vuelos · 2026</span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+SISTEMA DE RESERVACIÓN DE VUELOS
+COMPROBANTE DE SIMULACIÓN — SIN VALIDEZ PARA VIAJAR
+Folio: 3e98c3ffb02f4dbeab2df115f370d2c2
+Usuario: Usuario de demostración
+Vuelo: MX260112
+Origen: Ciudad de México
+Destino: Guadalajara
+Salida: 2026-11-08T10:00:00-06:00
+Terminal 2 · Puerta 2
+Tipo: Ida y vuelta (retorno pendiente de itinerario)
+Número de asientos: 2
+Asiento 11 | Turista | Adulto | $1,520.00 MXN
+Asiento 12 | Turista | Niño | $800.00 MXN
+Total: $2,320.00 MXN
+Método simulado: tarjeta
+Confirmación UTC: 2026-10-14T03:34:12.323339+00:00
+No se ha asignado asiento ni fecha de regreso. No se efectuó ningún cobro.

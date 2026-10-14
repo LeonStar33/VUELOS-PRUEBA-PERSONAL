@@ -1,0 +1,7 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, name TEXT NOT NULL, email TEXT UNIQUE NOT NULL, password TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS flights(id TEXT PRIMARY KEY, destination TEXT NOT NULL, kind TEXT NOT NULL, departure TEXT NOT NULL, adult INTEGER NOT NULL, child INTEGER NOT NULL, senior INTEGER NOT NULL, first INTEGER NOT NULL, discount INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS bookings(id TEXT PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id), flight_id TEXT NOT NULL REFERENCES flights(id), trip TEXT NOT NULL CHECK(trip IN ('oneway','roundtrip')), status TEXT NOT NULL CHECK(status IN ('holding','checkout','paid','expired','cancelled')), expires REAL NOT NULL, created REAL NOT NULL, total INTEGER, method TEXT, paid_at REAL);
+CREATE TABLE IF NOT EXISTS seats(flight_id TEXT REFERENCES flights(id), number INTEGER CHECK(number BETWEEN 1 AND 30), cabin TEXT CHECK(cabin IN ('first','tourist')), PRIMARY KEY(flight_id,number));
+CREATE TABLE IF NOT EXISTS tickets(booking_id TEXT REFERENCES bookings(id), flight_id TEXT, seat INTEGER, category TEXT CHECK(category IN ('adult','child','senior')), amount INTEGER NOT NULL, active INTEGER NOT NULL DEFAULT 1 CHECK(active IN (0,1)), PRIMARY KEY(booking_id,seat), FOREIGN KEY(flight_id,seat) REFERENCES seats(flight_id,number));
+CREATE UNIQUE INDEX IF NOT EXISTS one_owner ON tickets(flight_id,seat) WHERE active=1;

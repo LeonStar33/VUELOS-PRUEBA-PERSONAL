@@ -1,0 +1,57 @@
+[
+  {
+    "id": "MX261319",
+    "destination": "Quatar",
+    "kind": "Internacional",
+    "departure": "2026-11-08T03:00:00-06:00",
+    "adult": 6595000,
+    "child": 6050000,
+    "senior": 5000000,
+    "first": 12000000,
+    "discount": 20
+  },
+  {
+    "id": "MX260112",
+    "destination": "Guadalajara",
+    "kind": "Nacional",
+    "departure": "2026-11-08T10:00:00-06:00",
+    "adult": 95000,
+    "child": 50000,
+    "senior": 50000,
+    "first": 800000,
+    "discount": 20
+  },
+  {
+    "id": "MX261923",
+    "destination": "Italia",
+    "kind": "Internacional",
+    "departure": "2026-11-08T08:00:00-06:00",
+    "adult": 2595000,
+    "child": 1050000,
+    "senior": 1000000,
+    "first": 5000000,
+    "discount": 0
+  },
+  {
+    "id": "MX261512",
+    "destination": "Francia",
+    "kind": "Internacional",
+    "departure": "2026-11-08T15:00:00-06:00",
+    "adult": 3065000,
+    "child": 1550000,
+    "senior": 1550000,
+    "first": 6060000,
+    "discount": 0
+  },
+  {
+    "id": "MX260408",
+    "destination": "Korea",
+    "kind": "Internacional",
+    "departure": "2026-11-08T19:00:00-06:00",
+    "adult": 6595000,
+    "child": 6050000,
+    "senior": 5000000,
+    "first": 9090000,
+    "discount": 0
+  }
+]

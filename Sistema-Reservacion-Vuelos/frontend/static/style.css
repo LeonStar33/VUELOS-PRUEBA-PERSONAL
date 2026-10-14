@@ -1,0 +1,77 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f4f7f9;color:#172b3d;font:16px/1.6 system-ui,-apple-system,sans-serif}
+header,main,footer{max-width:1180px;margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;padding:24px}
+a{color:inherit;text-decoration:none}
+.brand{font-weight:850;font-size:23px;letter-spacing:2px}
+.brand small{display:block;font-size:9px;letter-spacing:2px;color:#617787}
+nav{display:flex;gap:22px;align-items:center}
+button,.button{border:0;border-radius:8px;background:#087e80;color:white;padding:12px 20px;cursor:pointer;font:inherit;font-weight:650;display:inline-block}
+button:hover,.button:hover{background:#075c62}
+button:disabled{opacity:.45;cursor:not-allowed}
+.secondary{background:#e6eff1;color:#143e4a}
+main{padding:0 24px}
+h1{font-size:clamp(36px,5vw,60px);line-height:1.12;letter-spacing:-2px;margin:12px 0 24px}
+h2{font-size:29px;margin:8px 0 16px}
+h3{margin:8px 0}
+.hero{background:#113749;color:white;padding:48px;border-radius:22px;display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+.hero p{color:#c5dce4}
+.eyebrow{font-size:12px;font-weight:750;letter-spacing:2px;color:#087e80}
+.boarding{border:1px solid #62818e;border-radius:16px;padding:30px;transform:rotate(3deg);background:#214b5b}
+.boarding strong{font-size:76px;display:block;line-height:1.3}
+.boarding span{font-size:11px;letter-spacing:3px}
+.route{color:#6ee0ce}
+.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:20px}
+section{margin-bottom:40px}
+#catalog,#my{padding-top:32px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.panel,.booking{background:white;border:1px solid #dce5ea;border-radius:14px;padding:24px}
+.card h3{font-size:27px}
+.card .code,.muted{color:#627887;font-size:14px}
+.price{font-size:25px;font-weight:750}
+.card label{margin-top:15px}
+.card button{width:100%;margin-top:16px}
+.tag{display:inline-block;background:#e2f3ef;color:#12675a;padding:3px 10px;border-radius:20px;font-size:12px}
+.fares{font-size:14px;border-top:1px solid #edf0f3;margin-top:15px;padding-top:12px}
+.fares p{margin:3px 0}
+label{display:block;font-size:14px;font-weight:600}
+input,select{display:block;border:1px solid #b5c8d2;background:white;padding:10px;border-radius:7px;font:inherit;color:#172b3d;width:100%;margin:5px 0 12px}
+form{max-width:480px}
+.actions,.controls{display:flex;gap:16px}
+.controls label{max-width:290px;flex:1}
+.legend span{color:#087e80}
+.seatgrid{display:grid;grid-template-columns:repeat(5,48px);gap:10px;margin:15px 0 25px}
+.seat{padding:10px 0;background:#eaf1f5;color:#17394a;border:1px solid #b5c8d2}
+.seat.mine{background:#087e80;color:white}
+.seat.held,.seat.paid{background:#aebcc5;color:#344956}
+.booking{margin-bottom:14px}
+.booking .actions{flex-wrap:wrap}
+.note{background:#e8f0f3;padding:24px;border-radius:12px;font-size:14px}
+.note p{max-width:900px}
+#message:not(:empty){position:sticky;top:10px;z-index:5;padding:16px;background:#fff2d1;border:1px solid #ddbe77;border-radius:10px;margin:16px 0}
+footer{padding:30px 24px;color:#617787;font-size:13px;display:flex;justify-content:space-between}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #da9b26;outline-offset:3px}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}
+.hero{padding:30px;grid-template-columns:1fr}
+.boarding{display:none}
+header{align-items:flex-start}
+nav{gap:12px;flex-wrap:wrap;font-size:13px}
+}
+@media(max-width:560px){.cards{grid-template-columns:1fr}
+.sectionhead,header,footer{display:block}
+nav{margin-top:18px}
+.hero{padding:26px}
+main{padding:0 16px}
+.controls{display:block}
+.actions{gap:8px}
+.card,.panel{padding:20px}
+}
+/* Keep status messages in the document flow so they do not cover seat controls. */
+#message:not(:empty){position:static}
+
+.seat:hover:not(:disabled):not(.mine){background:#cee9e4;color:#17394a;border-color:#087e80}
+
+
+.passenger-row{display:flex;align-items:center;gap:24px;margin:12px 0;padding:16px;background:#f4f7f9;border-radius:8px}.passenger-row label{flex:1}.passenger-row select{margin-bottom:0}
